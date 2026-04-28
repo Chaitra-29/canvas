@@ -1,0 +1,235 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+.buttonPreview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 500;
+  background: #1e3a5f33;
+}
+
+/* ── Top bar ─────────────────────────────────────── */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #1e293b;
+  flex-shrink: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.breadcrumbRoot {
+  color: #475569;
+}
+
+.breadcrumbSep {
+  color: #334155;
+}
+
+.breadcrumbCurrent {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.dimensions {
+  font-size: 12px;
+  color: #475569;
+  font-variant-numeric: tabular-nums;
+  background: #1e293b;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+/* ── Canvas area ─────────────────────────────────── */
+.canvasArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 32px;
+  background:
+    radial-gradient(circle, #1e293b 1px, transparent 1px) 0 0 / 24px 24px;
+}
+
+.frame {
+  border: 2px solid;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.frameFill {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.frameCenterDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.frameName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.frameType {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+}
+
+/* ── Detail drawer ───────────────────────────────── */
+.detailDrawer {
+  flex-shrink: 0;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  background: #0f172a;
+}
+
+.detailDrawer::-webkit-scrollbar {
+  height: 4px;
+}
+.detailDrawer::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+.section {
+  padding: 16px 20px;
+  min-width: 200px;
+  border-right: 1px solid #1e293b;
+}
+
+.section:last-child {
+  border-right: none;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px;
+}
+
+/* ── Prop grid ───────────────────────────────────── */
+.propGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 12px;
+  margin: 0;
+}
+
+.propGrid dt {
+  font-size: 12px;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.propGrid dd {
+  font-size: 12px;
+  color: #cbd5e1;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.typePill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Description ─────────────────────────────────── */
+.description {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 320px;
+}
+
+/* ── Tags ────────────────────────────────────────── */
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 11px;
+  color: #94a3b8;
+  background: #1e293b;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ── Empty state ─────────────────────────────────── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  opacity: 0.4;
+}
+
+
+.typeBadge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 1px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  background: red;
+  color: #93c5fd;
+  padding: 1rem;
+  margin: 1rem;
+  width: fit-content;
+}

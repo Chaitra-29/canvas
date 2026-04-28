@@ -1,0 +1,46 @@
+.shell {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.panelGroup {
+  width: 100%;
+  height: 100%;
+}
+
+.listPanelWrapper {
+  overflow: hidden;
+}
+
+.canvasPanelWrapper {
+  overflow: hidden;
+}
+
+.resizeHandle {
+  width: 4px;
+  background: transparent;
+  cursor: col-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.resizeHandle:hover .resizeBar,
+.resizeHandle[data-resize-handle-active] .resizeBar {
+  background: #3b82f6;
+  opacity: 1;
+}
+
+.resizeBar {
+  width: 2px;
+  height: 100%;
+  background: #1e293b;
+  opacity: 0.8;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
